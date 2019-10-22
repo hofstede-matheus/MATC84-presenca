@@ -5,12 +5,12 @@ Trabalho de MATC84 - Laboratório de Programação Web (2019.1)
 ## Arquivos
 > **aplicacao/** => codigo
 
->> **sistema_presenca** => projeto principal
+>> **sistema_presenca/** => projeto principal
 
->> **presenca**: aplicativo de presenca
+>> **presenca/** => aplicativo de presenca
 
 
-> **modelagem_database** => projeto inicial do banco de dados (arquivos com fins meramente ilustrativos)
+> **modelagem_database/** => projeto inicial do banco de dados (arquivos com fins meramente ilustrativos)
 
 ----
 ## Como Executar
