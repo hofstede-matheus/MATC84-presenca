@@ -17,7 +17,7 @@ class Pessoa(models.Model):
 
     # Metodos
     def __str__(self):
-      return f'{self.nome}, {self.sobrenome}'
+      return f'{self.nome} {self.sobrenome}'
 
 
 class Professor(models.Model):
