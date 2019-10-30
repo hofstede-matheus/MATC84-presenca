@@ -1,0 +1,31 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+  <h1>Lista de Matérias</h1>
+
+  {% if materia_list %}
+
+  <table class="table" >
+    <thead>
+      <tr> 
+        <th scope="col">Código</th>
+        <th scope="col">Nome</th>
+      </tr>
+    </thead>
+
+    <tbody>
+       {% for materia in materia_list %}
+           <tr>
+             <th> {{ materia.codigo }}</th>
+             <th> {{ materia.nome }} </th>
+           </tr>
+       {% endfor %}
+    </tbody>
+  </table>
+
+  {% else %}
+  <p> Nenhuma matéria cadastrada ainda. </p>
+  {% endif %}       
+
+  <a href="{%url 'materia_create' %}"> Cadastrar Matéria </a> 
+{% endblock %}
