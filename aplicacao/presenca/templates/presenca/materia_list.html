@@ -18,6 +18,10 @@
            <tr>
              <th> {{ materia.codigo }}</th>
              <th> {{ materia.nome }} </th>
+             <th>
+                <a  href="{%url 'materia_update' pk=materia.pk %}"> Editar </a>
+                <a  href="{%url 'materia_delete' pk=materia.pk %}"> Excluir </a>
+             </th>
            </tr>
        {% endfor %}
     </tbody>

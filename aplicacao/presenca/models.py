@@ -45,6 +45,8 @@ class Materia(models.Model):
     # Metadados
 
     # Metodos
+    def __str__(self):
+        return f'{self.codigo} - {self.nome}'
 
 
 class Turma(models.Model):

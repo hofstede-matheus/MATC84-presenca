@@ -25,10 +25,12 @@ class MateriaListView(generic.ListView):
 class MateriaCreate(CreateView):
     model = Materia
     fields = '__all__'
+    success_url = reverse_lazy('materias')
 
 class MateriaUpdate(UpdateView):
     model = Materia
     fields = '__all__'
+    success_url = reverse_lazy('materias')
 
 class MateriaDelete(DeleteView):
     model = Materia
