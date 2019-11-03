@@ -1,15 +1,18 @@
+{% extends "base_generic.html" %}
+
 {% block content %}
 
+<h1> Sistema de Presença </h1>
+
 {% if form.errors %}
-  <p>Your username and password didn't match. Please try again.</p>
+  <p>Ocorreu algum erro. Por favor, tente novamente.</p>
 {% endif %}
 
 {% if next %}
   {% if user.is_authenticated %}
-    <p>Your account doesn't have access to this page. To proceed,
-    please login with an account that has access.</p>
+    <p> Sua conta não tem acesso a essa página. Para prosseguir, por favor faça login com uma conta que tenha acesso. </p>
   {% else %}
-    <p>Please login to see this page.</p>
+    <p>Por favor, faça login para ver essa página. </p>
   {% endif %}
 {% endif %}
 
@@ -28,11 +31,11 @@
 </tr>
 </table>
 
-<input type="submit" value="login" />
+<input class="btn btn-primary" type="submit" value="Login" />
 <input type="hidden" name="next" value="{{ next }}" />
 </form>
 
 {# Assumes you setup the password_reset view in your URLconf #}
-<p><a href="{% url 'password_reset' %}">Lost password?</a></p>
+<p><a href="{% url 'password_reset' %}">Esqueceu a senha?</a></p>
 
 {% endblock %}
