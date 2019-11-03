@@ -8,9 +8,10 @@
 
 <form action="" method="POST">
   {% csrf_token %}
-  <input type="submit" value="Sim, deletar.">
+  <input class="btn btn-danger" type="submit" value="Sim, deletar">
 </form>
 
-<a href="{%url 'materias' %}"> Voltar </a>
+<br>
+<a class="btn btn-light" href="{%url 'materias' %}"> Voltar </a>
 
 {% endblock %}

@@ -23,11 +23,13 @@ class MateriaListView(generic.ListView):
     model = Materia
 
 class MateriaCreate(CreateView):
+    titulo = "Cadastrar Matéria"
     model = Materia
     fields = '__all__'
     success_url = reverse_lazy('materias')
 
 class MateriaUpdate(UpdateView):
+    titulo = "Editar Matéria"
     model = Materia
     fields = '__all__'
     success_url = reverse_lazy('materias')

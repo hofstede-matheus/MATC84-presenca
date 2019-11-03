@@ -1,13 +1,23 @@
 {% extends "base_generic.html" %}
+{% load widget_tweaks %}
 
 {% block content %}
+  <h1> {{view.titulo}} </h1>
+
   <form action="" method="post">
     {% csrf_token %}
-    <table>
-    {{ form.as_table }}
-    </table>
-    <input type="submit" value="Enviar">
+
+    {% for field in form.visible_fields %}
+        <div class="form-group">
+            <label> {{field.label_tag}} </label>
+            {{field|add_class:"form-control"}} 
+            <small class="form-text text-muted"> {{field.help_text }} </small>
+        </div>
+    {% endfor %}
+
+    <input class="btn btn-success" type="submit" value="Enviar">
   </form>
 
-  <a href="{%url 'materias' %}"> Voltar </a>
+  <br>
+  <a class="btn btn-light" href="{%url 'materias' %}"> Voltar </a>
 {% endblock %}
