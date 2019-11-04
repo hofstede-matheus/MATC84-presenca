@@ -18,7 +18,7 @@ def home(request):
     return render(request, 'home.html', context=context)
 
 
-from presenca.models import Materia
+from presenca.models import Materia, Turma
 from django.views import generic
 from django.contrib.auth.mixins import LoginRequiredMixin
 
@@ -40,3 +40,11 @@ class MateriaUpdate(LoginRequiredMixin, UpdateView):
 class MateriaDelete(LoginRequiredMixin, DeleteView):
     model = Materia
     success_url = reverse_lazy('materias')
+
+@login_required
+def TurmaListView(request, materia):
+    model = Turma
+    codigo_materia = Materia.objects.get(pk=materia).codigo 
+    turmas = Turma.objects.filter(materia=materia)
+
+    return render(request, 'presenca/turma_list.html', {'codigo_materia': codigo_materia, 'turma_list': turmas})

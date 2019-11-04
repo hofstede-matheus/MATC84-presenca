@@ -56,7 +56,7 @@ class Turma(models.Model):
     codigo = models.PositiveIntegerField()
     total_aulas = models.PositiveIntegerField()
     
-    alunos = models.ManyToManyField(Aluno)
+    alunos = models.ManyToManyField(Aluno, blank=True)
 
     # Metadados
 

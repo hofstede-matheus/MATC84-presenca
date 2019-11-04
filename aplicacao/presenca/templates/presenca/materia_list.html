@@ -20,6 +20,7 @@
              <td> {{ materia.codigo }}</td>
              <td> {{ materia.nome }} </td>
              <td>
+                <a class="btn btn-info"  href="{%url 'turmas' materia=materia.pk %}"> Turmas </a>
                 <a class="btn btn-warning"  href="{%url 'materia_update' pk=materia.pk %}"> Editar </a>
                 <a class="btn btn-danger" href="{%url 'materia_delete' pk=materia.pk %}"> Deletar </a>
              </td>

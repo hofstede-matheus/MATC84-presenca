@@ -1,0 +1,37 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+  <h1 class="titulo"> [{{ codigo_materia }}] Turmas</h1>
+
+  {% if turma_list %}
+
+  <table class="table table-hover" >
+    <thead class="thead-dark">
+      <tr> 
+        <th scope="col">Código</th>
+        <th scope="col">Professor</th>
+        <th scope="col"> </th>
+      </tr>
+    </thead>
+
+    <tbody>
+       {% for turma in turma_list %}
+           <tr>
+             <td> {{ turma.codigo }}</td>
+             <td> {{ turma.professor }} </td>
+             <td>
+                <a class="btn btn-warning"  href=""> Editar </a>
+                <a class="btn btn-danger" href=""> Deletar </a>
+             </td>
+           </tr>
+       {% endfor %}
+    </tbody>
+  </table>
+
+  {% else %}
+  <p> Nenhuma turma cadastrada ainda. </p>
+  {% endif %}       
+
+  <a class="btn btn-primary" href=""> Cadastrar </a> 
+
+{% endblock %}
