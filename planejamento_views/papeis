@@ -1,0 +1,34 @@
+coordenador (navbar):
+    - materias
+        - abre lista com todas as materias cadastradas
+            - CRUD de materias
+        - turmas
+            - CRUD de turmas 
+
+
+alunos (navbar):
+    - materias
+        - só pode ver as matérias
+        - turmas
+            - abre turmas da matéria
+            - pode se inscrever em uma turma
+
+    - turmas
+        - pode ver as turmas em que esta inscrito
+        - pode se inscrever em uma turma
+        - presenças
+            - abre uma tabela com todas as aulas daquela turma
+            - pode colocar ou tirar a presenca
+
+professor (navbar)
+    - materias
+        - só pode ver as matérias
+        - turmas
+            - abre turmas da materia
+            - pode criar uma turma nova (ele leciona)
+        
+    - turmas
+        - pode ver as turmas que leciona
+        - presenças
+            - abre uma tabela com todas as aulas daquela turma, todos os alunos e todas as presencas
+            - pode dar ou tirar a presenca de um aluno
